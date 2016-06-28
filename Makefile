@@ -126,6 +126,15 @@ release-race: docker-race
 
 release: release-normal release-race
 
+release-conditional:
+	# We are building a tagged commit if REPO_VERSION contains the current git hash
+	sh -c "if git tag --contains $(GIT_HASH) | egrep -q \"^$(REPO_VERSION)$$\"; then \
+		echo \"Executing release on tag build $(REPO_VERSION)\"; \
+		make release; \
+	else \
+		echo \"Not executing release on non-tag build\"; \
+	fi"
+
 run: build
 	./build/bin/$(ARCH)/$(BINARY_NAME) --backends=stdout --verbose --flush-interval=1s
 
