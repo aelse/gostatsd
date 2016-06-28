@@ -1,4 +1,9 @@
+sudo: required
+
 language: go
+
+services:
+  - docker
 
 go:
   - 1.6.2
@@ -19,3 +24,4 @@ script:
   - METALINTER_CONCURRENCY=2 make check
   - make bench-race
   - make coveralls
+  - make release-conditional
