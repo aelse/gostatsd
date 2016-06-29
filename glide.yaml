@@ -1,4 +1,4 @@
-package: github.com/atlassian/gostatsd
+package: github.com/aelse/gostatsd
 import:
 - package: github.com/Sirupsen/logrus
 - package: github.com/kisielk/cmd
