@@ -4,8 +4,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/atlassian/gostatsd/tester/fakesocket"
-	"github.com/atlassian/gostatsd/types"
+	"github.com/aelse/gostatsd/tester/fakesocket"
+	"github.com/aelse/gostatsd/types"
 
 	"golang.org/x/net/context"
 )

@@ -7,8 +7,8 @@ import (
 	"regexp"
 	"time"
 
-	backendTypes "github.com/atlassian/gostatsd/backend/types"
-	"github.com/atlassian/gostatsd/types"
+	backendTypes "github.com/aelse/gostatsd/backend/types"
+	"github.com/aelse/gostatsd/types"
 
 	log "github.com/Sirupsen/logrus"
 	"github.com/spf13/viper"

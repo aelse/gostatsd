@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/atlassian/gostatsd/types"
+	"github.com/aelse/gostatsd/types"
 )
 
 func TestMetricsLexer(t *testing.T) {

@@ -8,7 +8,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/atlassian/gostatsd/types"
+	"github.com/aelse/gostatsd/types"
 
 	log "github.com/Sirupsen/logrus"
 )

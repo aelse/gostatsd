@@ -3,12 +3,12 @@ package backend
 import (
 	"fmt"
 
-	"github.com/atlassian/gostatsd/backend/backends/datadog"
-	"github.com/atlassian/gostatsd/backend/backends/graphite"
-	"github.com/atlassian/gostatsd/backend/backends/null"
-	"github.com/atlassian/gostatsd/backend/backends/statsdaemon"
-	"github.com/atlassian/gostatsd/backend/backends/stdout"
-	backendTypes "github.com/atlassian/gostatsd/backend/types"
+	"github.com/aelse/gostatsd/backend/backends/datadog"
+	"github.com/aelse/gostatsd/backend/backends/graphite"
+	"github.com/aelse/gostatsd/backend/backends/null"
+	"github.com/aelse/gostatsd/backend/backends/statsdaemon"
+	"github.com/aelse/gostatsd/backend/backends/stdout"
+	backendTypes "github.com/aelse/gostatsd/backend/types"
 
 	log "github.com/Sirupsen/logrus"
 	"github.com/spf13/viper"

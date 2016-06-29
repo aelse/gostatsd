@@ -12,10 +12,10 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/atlassian/gostatsd/backend"
-	backendTypes "github.com/atlassian/gostatsd/backend/types"
-	"github.com/atlassian/gostatsd/cloudprovider"
-	"github.com/atlassian/gostatsd/statsd"
+	"github.com/aelse/gostatsd/backend"
+	backendTypes "github.com/aelse/gostatsd/backend/types"
+	"github.com/aelse/gostatsd/cloudprovider"
+	"github.com/aelse/gostatsd/statsd"
 
 	log "github.com/Sirupsen/logrus"
 	"github.com/spf13/pflag"

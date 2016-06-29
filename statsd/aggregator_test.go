@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/atlassian/gostatsd/types"
+	"github.com/aelse/gostatsd/types"
 
 	"github.com/stretchr/testify/assert"
 )

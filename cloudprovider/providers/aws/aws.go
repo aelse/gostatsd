@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"time"
 
-	cloudTypes "github.com/atlassian/gostatsd/cloudprovider/types"
-	"github.com/atlassian/gostatsd/types"
+	cloudTypes "github.com/aelse/gostatsd/cloudprovider/types"
+	"github.com/aelse/gostatsd/types"
 
 	log "github.com/Sirupsen/logrus"
 	"github.com/aws/aws-sdk-go/aws"

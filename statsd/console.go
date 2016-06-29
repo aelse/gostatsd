@@ -7,7 +7,7 @@ import (
 	"net"
 	"sync/atomic"
 
-	"github.com/atlassian/gostatsd/types"
+	"github.com/aelse/gostatsd/types"
 
 	log "github.com/Sirupsen/logrus"
 	"github.com/kisielk/cmd"

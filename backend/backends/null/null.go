@@ -1,8 +1,8 @@
 package null
 
 import (
-	backendTypes "github.com/atlassian/gostatsd/backend/types"
-	"github.com/atlassian/gostatsd/types"
+	backendTypes "github.com/aelse/gostatsd/backend/types"
+	"github.com/aelse/gostatsd/types"
 
 	"github.com/spf13/viper"
 	"golang.org/x/net/context"

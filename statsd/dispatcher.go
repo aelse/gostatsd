@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/atlassian/gostatsd/types"
+	"github.com/aelse/gostatsd/types"
 
 	log "github.com/Sirupsen/logrus"
 	"golang.org/x/net/context"

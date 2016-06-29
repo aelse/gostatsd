@@ -3,8 +3,8 @@ package cloudprovider
 import (
 	"fmt"
 
-	"github.com/atlassian/gostatsd/cloudprovider/providers/aws"
-	cloudTypes "github.com/atlassian/gostatsd/cloudprovider/types"
+	"github.com/aelse/gostatsd/cloudprovider/providers/aws"
+	cloudTypes "github.com/aelse/gostatsd/cloudprovider/types"
 
 	log "github.com/Sirupsen/logrus"
 	"github.com/spf13/viper"

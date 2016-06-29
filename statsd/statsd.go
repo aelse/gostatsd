@@ -10,9 +10,9 @@ import (
 	"sync"
 	"time"
 
-	backendTypes "github.com/atlassian/gostatsd/backend/types"
-	cloudTypes "github.com/atlassian/gostatsd/cloudprovider/types"
-	"github.com/atlassian/gostatsd/types"
+	backendTypes "github.com/aelse/gostatsd/backend/types"
+	cloudTypes "github.com/aelse/gostatsd/cloudprovider/types"
+	"github.com/aelse/gostatsd/types"
 
 	log "github.com/Sirupsen/logrus"
 	"github.com/spf13/pflag"

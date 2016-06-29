@@ -4,8 +4,8 @@ import (
 	"log"
 	"net"
 
-	"github.com/atlassian/gostatsd/statsd"
-	"github.com/atlassian/gostatsd/types"
+	"github.com/aelse/gostatsd/statsd"
+	"github.com/aelse/gostatsd/types"
 
 	"golang.org/x/net/context"
 )

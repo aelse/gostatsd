@@ -6,7 +6,7 @@ import (
 	"math"
 	"strconv"
 
-	"github.com/atlassian/gostatsd/types"
+	"github.com/aelse/gostatsd/types"
 )
 
 type lexer struct {

@@ -1,7 +1,7 @@
 package types
 
 import (
-	"github.com/atlassian/gostatsd/types"
+	"github.com/aelse/gostatsd/types"
 
 	"github.com/spf13/viper"
 	"golang.org/x/net/context"
