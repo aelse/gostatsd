@@ -24,5 +24,7 @@ script:
   - METALINTER_CONCURRENCY=2 make check
   - make bench-race
   - make coveralls
+
+after_success:
   - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
   - make release-conditional
