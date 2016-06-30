@@ -23,10 +23,10 @@ setup-ci:
 	glide install
 
 build: *.go fmt
-	go build -o build/bin/$(ARCH)/$(BINARY_NAME) $(GOBUILD_VERSION_ARGS) github.com/atlassian/gostatsd
+	go build -o build/bin/$(ARCH)/$(BINARY_NAME) $(GOBUILD_VERSION_ARGS) github.com/aelse/gostatsd
 
 build-race: *.go fmt
-	go build -race -o build/bin/$(ARCH)/$(BINARY_NAME) $(GOBUILD_VERSION_ARGS) github.com/atlassian/gostatsd
+	go build -race -o build/bin/$(ARCH)/$(BINARY_NAME) $(GOBUILD_VERSION_ARGS) github.com/aelse/gostatsd
 
 build-all:
 	go build $$(glide nv)
@@ -76,7 +76,7 @@ fuzz-setup:
 	go get -v -u github.com/dvyukov/go-fuzz/go-fuzz-build
 
 fuzz:
-	go-fuzz-build github.com/atlassian/gostatsd/statsd
+	go-fuzz-build github.com/aelse/gostatsd/statsd
 	go-fuzz -bin=./statsd-fuzz.zip -workdir=test_fixtures/lexer_fuzz
 
 watch:
@@ -90,11 +90,11 @@ docker:
 	docker run \
 		--rm \
 		-v "$(GOPATH)":"$(GP)" \
-		-w "$(GP)/src/github.com/atlassian/gostatsd" \
+		-w "$(GP)/src/github.com/aelse/gostatsd" \
 		-e GOPATH="$(GP)" \
 		-e CGO_ENABLED=0 \
 		golang:$(GOVERSION) \
-		go build -o build/bin/linux/$(BINARY_NAME) $(GOBUILD_VERSION_ARGS) -a -installsuffix cgo github.com/atlassian/gostatsd
+		go build -o build/bin/linux/$(BINARY_NAME) $(GOBUILD_VERSION_ARGS) -a -installsuffix cgo github.com/aelse/gostatsd
 	docker build --pull -t $(IMAGE_NAME):$(GIT_HASH) build
 
 # Compile a binary with -race. Needs to be run on a glibc-based system.
@@ -102,10 +102,10 @@ docker-race:
 	docker run \
 		--rm \
 		-v "$(GOPATH)":"$(GP)" \
-		-w "$(GP)/src/github.com/atlassian/gostatsd" \
+		-w "$(GP)/src/github.com/aelse/gostatsd" \
 		-e GOPATH="$(GP)" \
 		golang:$(GOVERSION) \
-		go build -race -o build/bin/linux/$(BINARY_NAME) $(GOBUILD_VERSION_ARGS) -a -installsuffix cgo github.com/atlassian/gostatsd
+		go build -race -o build/bin/linux/$(BINARY_NAME) $(GOBUILD_VERSION_ARGS) -a -installsuffix cgo github.com/aelse/gostatsd
 	docker build --pull -t $(IMAGE_NAME):$(GIT_HASH)-race -f build/Dockerfile-glibc build
 
 release-hash: check test docker
