@@ -127,8 +127,8 @@ release-race: docker-race
 release: release-normal release-race
 
 release-conditional:
-	# We are building a tagged commit if REPO_VERSION contains the current git hash and build is linux
-	bash -c "if [[ \"$(ARCH)\" == \"linux\" && \"$(git tag --contains $(GIT_HASH))\" == \"$(REPO_VERSION)\" ]]; then \
+	# We are building a tagged commit if REPO_VERSION contains the current git hash
+	bash -c "if [[ \"$(git tag --contains $(GIT_HASH))\" == \"$(REPO_VERSION)\" ]]; then \
 		echo \"Executing release on tag build $(REPO_VERSION)\"; \
 		make release; \
 	else \

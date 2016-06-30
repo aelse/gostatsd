@@ -26,5 +26,7 @@ script:
   - make coveralls
 
 after_success:
-  - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-  - make release-conditional
+  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then
+    docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+    ARCH=linux make release-conditional
+    fi
