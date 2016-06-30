@@ -128,7 +128,7 @@ release: release-normal release-race
 
 release-conditional:
 	# We are building a tagged commit if REPO_VERSION contains the current git hash and build is linux
-	sh -c "if [ \"$(ARCH)\" == \"linux\" -a \"$(git tag --contains $(GIT_HASH))\" == \"$(REPO_VERSION)\" ]; then \
+	bash -c "if [[ \"$(ARCH)\" == \"linux\" -a \"$(git tag --contains $(GIT_HASH))\" == \"$(REPO_VERSION)\" ]]; then \
 		echo \"Executing release on tag build $(REPO_VERSION)\"; \
 		make release; \
 	else \
